@@ -11,9 +11,10 @@ public class Order {
     }
 
 
-    public Order(int code, Double basicValue) {
+    public Order(int code, Double basicValue, Double discount) {
         this.code = code;
         this.basicValue = basicValue;
+        this.discount = discount;
     }
 
 

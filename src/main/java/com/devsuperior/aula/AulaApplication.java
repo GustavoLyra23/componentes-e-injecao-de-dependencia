@@ -26,10 +26,10 @@ public class AulaApplication implements CommandLineRunner {
         Scanner sc = new Scanner(System.in);
         var code = sc.nextInt();
         var basicValue = sc.nextDouble();
-        Order order = new Order(code, basicValue);
+        var discount = sc.nextDouble();
+        Order order = new Order(code, basicValue, discount);
+        System.out.println("Pedido codigo: " + code);
+        System.out.printf("Valor total: %.2f", orderService.total(order));
 
-
-        System.out.println("Pedido codigo " + code);
-        System.out.printf("Valor total do pedido %.2f", orderService.total(order));
     }
 }
